@@ -109,6 +109,6 @@ const Agent = () => {
                 )}
             </div>
         </>
-    )
-}
-export default Agent
+    );
+};
+export default Agent;
