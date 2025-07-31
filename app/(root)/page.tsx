@@ -55,7 +55,7 @@ async function Home() {
                             <InterviewCard
                                 key={interview.id}
                                 userId={user?.id}
-                                interviewId={interview.id}
+                                id={interview.id}
                                 role={interview.role}
                                 type={interview.type}
                                 techstack={interview.techstack}
@@ -65,7 +65,6 @@ async function Home() {
                     ) : (
                         <p>You haven&apos;t taken any interviews yet</p>
                     )}
-                    initially
 
                 </div>
             </section>
@@ -79,7 +78,7 @@ async function Home() {
                             <InterviewCard
                                 key={interview.id}
                                 userId={user?.id}
-                                interviewId={interview.id}
+                                id={interview.id}
                                 role={interview.role}
                                 type={interview.type}
                                 techstack={interview.techstack}
@@ -89,8 +88,7 @@ async function Home() {
                     ) : (
                         <p>There are no interviews available</p>
                     )}
-                    initially
-                    <p>You haven&apos;t taken any interviews yet</p>
+
                 </div>
             </section>
         </>
