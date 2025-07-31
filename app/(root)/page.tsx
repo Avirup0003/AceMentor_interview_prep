@@ -50,25 +50,23 @@ async function Home() {
                 <h2>Your Interviews</h2>
 
                 <div className="interviews-section">
-                    {/*{hasPastInterviews ? (*/}
-                    {/*    userInterviews?.map((interview) => (*/}
-                    {/*        <InterviewCard*/}
-                    {/*            key={interview.id}*/}
-                    {/*            userId={user?.id}*/}
-                    {/*            interviewId={interview.id}*/}
-                    {/*            role={interview.role}*/}
-                    {/*            type={interview.type}*/}
-                    {/*            techstack={interview.techstack}*/}
-                    {/*            createdAt={interview.createdAt}*/}
-                    {/*        />*/}
-                    {/*    ))*/}
-                    {/*) : (*/}
-                    {/*    <p>You haven&apos;t taken any interviews yet</p>*/}
-                    {/*)}*/}
-                    {/*initially*/}
-                    {dummyInterviews.map((interview) => (
-                        <InterviewCard {...interview} key={interview.id} />
-                    ))}
+                    {hasPastInterviews ? (
+                        userInterviews?.map((interview) => (
+                            <InterviewCard
+                                key={interview.id}
+                                userId={user?.id}
+                                interviewId={interview.id}
+                                role={interview.role}
+                                type={interview.type}
+                                techstack={interview.techstack}
+                                createdAt={interview.createdAt}
+                            />
+                        ))
+                    ) : (
+                        <p>You haven&apos;t taken any interviews yet</p>
+                    )}
+                    initially
+
                 </div>
             </section>
 
@@ -76,26 +74,23 @@ async function Home() {
                 <h2>Take Interviews</h2>
 
                 <div className="interviews-section">
-                    {/*{hasUpcomingInterviews ? (*/}
-                    {/*    allInterview?.map((interview) => (*/}
-                    {/*        <InterviewCard*/}
-                    {/*            key={interview.id}*/}
-                    {/*            userId={user?.id}*/}
-                    {/*            interviewId={interview.id}*/}
-                    {/*            role={interview.role}*/}
-                    {/*            type={interview.type}*/}
-                    {/*            techstack={interview.techstack}*/}
-                    {/*            createdAt={interview.createdAt}*/}
-                    {/*        />*/}
-                    {/*    ))*/}
-                    {/*) : (*/}
-                    {/*    <p>There are no interviews available</p>*/}
-                    {/*)}*/}
-                    {/*initially*/}
-                    {dummyInterviews.map((interview) => (
-                        <InterviewCard {...interview} key={interview.id} />
-                    ))}
-                    {/*<p>You haven&apos;t taken any interviews yet</p>*/}
+                    {hasUpcomingInterviews ? (
+                        allInterview?.map((interview) => (
+                            <InterviewCard
+                                key={interview.id}
+                                userId={user?.id}
+                                interviewId={interview.id}
+                                role={interview.role}
+                                type={interview.type}
+                                techstack={interview.techstack}
+                                createdAt={interview.createdAt}
+                            />
+                        ))
+                    ) : (
+                        <p>There are no interviews available</p>
+                    )}
+                    initially
+                    <p>You haven&apos;t taken any interviews yet</p>
                 </div>
             </section>
         </>
