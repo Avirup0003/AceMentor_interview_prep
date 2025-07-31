@@ -16,7 +16,7 @@ const InterviewCard = async ({
                                  techstack,
                                  createdAt,
                              }: InterviewCardProps) => {
-    const feedback = null as Feedback | null;
+    const feedback = userId && id ? await getFeedbackByInterviewId({ interviewId: id, userId}) : null;
 
     const normalizedType = /mix/gi.test(type) ? "Mixed" : type;
 
